@@ -6,24 +6,24 @@ namespace tablice3
     {
         static void Main(string[] args)
         {
-            // Pobierz rozmiar tablicy od użytkownika
+            
             Console.WriteLine("Podaj rozmiar tablicy:");
             int n = int.Parse(Console.ReadLine());
 
-            // Stwórz tablicę t1 o podanym rozmiarze
+            
             int[] t1 = new int[n];
 
-            // Wypełnij tablicę t1 wartościami podanymi przez użytkownika
+            
             for (int i = 0; i < n; i++)
             {
                 Console.WriteLine("Podaj wartość dla elementu o indeksie {0}:", i);
                 t1[i] = int.Parse(Console.ReadLine());
             }
 
-            // Stwórz tablicę t2 o takim samym rozmiarze, jak t1
+            
             int[] t2 = new int[n];
 
-            // Przepisz dodatnie elementy z tablicy t1 do tablicy t2
+            
             for (int i = 0; i < n; i++)
             {
                 if (t1[i] > 0)
@@ -32,11 +32,17 @@ namespace tablice3
                 }
             }
 
-            // Wyświetl zawartość tablicy t2
-            Console.WriteLine("Zawartość tablicy t2:");
-            for (int i = 0; i < n; i++)
+            
+            Console.Write("t1 :");
+            foreach (int elek in t1)
             {
-                Console.WriteLine(t2[i]);
+                Console.Write(elek + "\t ");
+            }
+            Console.WriteLine();
+            Console.Write("t2 :");
+            foreach (int elek in t2)
+            {
+                Console.Write(elek + "\t ");
             }
 
             Console.ReadKey();
